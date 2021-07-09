@@ -1,0 +1,57 @@
+{
+  "name": "@mt816/eslint-config",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "secretlint": "secretlint --secretlintignore .gitignore '**/*'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*": [
+      "secretlint"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mt816/eslint-config.git"
+  },
+  "author": "mt816",
+  "keywords": [
+    "eslint"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mt816/eslint-config/issues"
+  },
+  "homepage": "https://github.com/mt816/eslint-config#readme",
+  "devDependencies": {
+    "husky": "^3.0.0",
+    "lint-staged": "^11.0.0",
+    "secretlint": "^2.1.1"
+  },
+  "peerDependencies": {
+    "eslint": "^7.18.0"
+  },
+  "dependencies": {
+    "@secretlint/secretlint-rule-no-dotenv": "^2.1.1",
+    "@secretlint/secretlint-rule-preset-recommend": "^2.1.1",
+    "@typescript-eslint/eslint-plugin": "^4.14.1",
+    "@typescript-eslint/parser": "^4.14.1",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-config-next": "^11.0.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-vue": "^7.5.0",
+    "prettier": "^2.2.1"
+  }
+}
